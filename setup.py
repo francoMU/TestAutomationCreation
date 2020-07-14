@@ -59,7 +59,7 @@ source_dir = "spglib/src"
 
 include_dirs = [source_dir, ]
 
-sources_full_path = [Path(source_dir) / file for file in sources]
+sources_full_path = [str(Path(source_dir) / file) for file in sources]
 
 extra_compile_args = []
 extra_link_args = []
