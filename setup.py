@@ -67,7 +67,7 @@ define_macros = []
 
 extension = Extension('spglib._spglib',
                       include_dirs=include_dirs,
-                      sources=['_spglib.c'] + sources,
+                      sources=sources,
                       extra_compile_args=extra_compile_args,
                       extra_link_args=extra_link_args,
                       define_macros=define_macros)
