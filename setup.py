@@ -12,8 +12,15 @@ class CustomBuildExtCommand(build_ext):
 
     def run(self):
 
+        print("*"*20)
+
+        full_path = os.path.realpath(__file__)
+        exe_dir = os.path.dirname(full_path)
+
+        print("*"*20)
+
         command = "git submodule update --init --recursive"
-        process = subprocess.Popen(command)
+        process = subprocess.Popen(command, shell=True, cwd=exe_dir)
         process.wait()
 
         build_ext.run(self)
