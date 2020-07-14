@@ -59,7 +59,7 @@ source_dir = "spglib/src"
 
 include_dirs = [source_dir, ]
 
-sources_full_path = [Path(source_dir) / file for file in source_dir]
+sources_full_path = [Path(source_dir) / file for file in sources]
 
 extra_compile_args = []
 extra_link_args = []
@@ -67,7 +67,7 @@ define_macros = []
 
 extension = Extension('spglib._spglib',
                       include_dirs=include_dirs,
-                      sources=sources,
+                      sources=sources_full_path,
                       extra_compile_args=extra_compile_args,
                       extra_link_args=extra_link_args,
                       define_macros=define_macros)
