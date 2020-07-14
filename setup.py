@@ -66,8 +66,6 @@ extension = Extension('spglib._spglib',
                       define_macros=define_macros)
 
 
-
-
 setup(
     name='spglibtricks',
     version='0.1',
